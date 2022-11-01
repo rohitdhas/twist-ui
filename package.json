@@ -1,0 +1,103 @@
+{
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test --passWithNoTests",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "name": "twist-ui",
+  "author": "Rohit Dhas",
+  "description": "A simple and minimalistic React Component Library",
+  "module": "dist/twist-ui.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/twist-ui.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/twist-ui.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.19.6",
+    "@size-limit/preset-small-lib": "^8.1.0",
+    "@storybook/addon-essentials": "^6.5.13",
+    "@storybook/addon-info": "^5.3.21",
+    "@storybook/addon-links": "^6.5.13",
+    "@storybook/addons": "^6.5.13",
+    "@storybook/react": "^6.5.13",
+    "@tailwindcss/postcss7-compat": "^2.2.17",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@types/react": "^18.0.24",
+    "@types/react-dom": "^18.0.8",
+    "@types/styled-components": "^5.1.26",
+    "autoprefixer": "^9",
+    "babel-loader": "^9.0.1",
+    "husky": "^8.0.1",
+    "identity-obj-proxy": "^3.0.0",
+    "postcss": "^8.4.18",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-is": "^18.2.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "size-limit": "^8.1.0",
+    "styled-components": "^5.3.6",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.4.1",
+    "typescript": "^4.8.4"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rohitdhas/twist-ui.git"
+  },
+  "keywords": [
+    "react",
+    "component",
+    "library",
+    "ui",
+    "twist"
+  ],
+  "bugs": {
+    "url": "https://github.com/rohitdhas/twist-ui/issues"
+  },
+  "homepage": "https://github.com/rohitdhas/twist-ui#readme"
+}
