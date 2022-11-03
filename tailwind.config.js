@@ -1,7 +1,7 @@
 module.exports = {
   purge: {
     content: ['./src/components/**/*.tsx', './src/components/**/*.styled.tsx'],
-    enabled: true,
+    enabled: process.env.NODE_ENV === 'publish',
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
