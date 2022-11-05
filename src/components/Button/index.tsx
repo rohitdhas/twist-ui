@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 
 type ButtonVariants = 'primary' | 'secondary';
 interface Props {
@@ -7,12 +6,8 @@ interface Props {
   varient?: ButtonVariants;
 }
 
-const StyledButton = styled.button.attrs(({}: { variant: ButtonVariants }) => ({
-  className: 'font-bold text-white bg-purple-500 px-3 py-2 rounded-md',
-}))<{ variant: ButtonVariants }>``;
-
 const Button: React.FC<Props> = ({ label }) => {
-  return <StyledButton variant="primary">{label || 'Click Me!'}</StyledButton>;
+  return <button>{label || 'Click Me!'}</button>;
 };
 
 export default Button;
