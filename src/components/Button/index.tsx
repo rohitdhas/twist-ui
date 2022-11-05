@@ -7,7 +7,11 @@ interface Props {
 }
 
 const Button: React.FC<Props> = ({ label }) => {
-  return <button>{label || 'Click Me!'}</button>;
+  return (
+    <button className="font-bold text-white px-4 py-2 rounded-md bg-purple-500 hover:bg-purple-700 transition-all">
+      {label || 'Click Me!'}
+    </button>
+  );
 };
 
 export default Button;
