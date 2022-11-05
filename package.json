@@ -73,7 +73,6 @@
     "react-is": "^18.2.0",
     "rollup-plugin-postcss": "^4.0.2",
     "size-limit": "^8.1.0",
-    "styled-components": "^5.3.6",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "tsdx": "^0.14.1",
     "tslib": "^2.4.1",
