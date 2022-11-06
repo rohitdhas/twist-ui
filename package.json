@@ -23,7 +23,6 @@
     "build-storybook": "build-storybook"
   },
   "peerDependencies": {
-    "framer-motion": "6.5.1",
     "react": ">=16"
   },
   "husky": {
@@ -67,7 +66,6 @@
     "@types/styled-components": "^5.1.26",
     "autoprefixer": "^9",
     "babel-loader": "^9.0.1",
-    "framer-motion": "6.5.1",
     "husky": "^8.0.1",
     "identity-obj-proxy": "^3.0.0",
     "postcss": "^8.4.18",
