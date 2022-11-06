@@ -3,7 +3,7 @@ module.exports = {
     content: ['./src/components/**/*.tsx', './src/components/**/*.styled.tsx'],
     enabled: process.env.NODE_ENV === 'publish',
   },
-  darkMode: false, // or 'media' or 'class'
+  darkMode: false,
   theme: {
     extend: {},
   },
