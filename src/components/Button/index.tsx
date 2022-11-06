@@ -1,16 +1,19 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { ButtonProps } from './Button.types';
 
-type ButtonVariants = 'primary' | 'secondary';
-interface Props {
-  label: string;
-  varient?: ButtonVariants;
-}
-
-const Button: React.FC<Props> = ({ label }) => {
+const Button: React.FC<ButtonProps> = props => {
+  const { label, ...rest } = props;
   return (
-    <button className="font-bold text-white px-4 py-2 rounded-md bg-purple-500 hover:bg-purple-700 transition-all">
+    <motion.button
+      initial={{ x: -100 }}
+      animate={{ x: 100 }}
+      exit={{ x: -100 }}
+      className="font-bold text-white px-4 py-2 rounded-md bg-purple-500 hover:bg-purple-700 transition-all"
+      {...rest}
+    >
       {label || 'Click Me!'}
-    </button>
+    </motion.button>
   );
 };
 
