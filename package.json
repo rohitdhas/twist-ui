@@ -1,5 +1,5 @@
 {
-  "version": "0.1.8",
+  "version": "0.2.2",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -17,11 +17,13 @@
     "lint": "tsdx lint",
     "prepare": "tsdx build",
     "size": "size-limit",
+    "publish": "NODE_ENV=publish npm publish",
     "analyze": "size-limit --why",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
   "peerDependencies": {
+    "framer-motion": "6.5.1",
     "react": ">=16"
   },
   "husky": {
@@ -65,6 +67,7 @@
     "@types/styled-components": "^5.1.26",
     "autoprefixer": "^9",
     "babel-loader": "^9.0.1",
+    "framer-motion": "6.5.1",
     "husky": "^8.0.1",
     "identity-obj-proxy": "^3.0.0",
     "postcss": "^8.4.18",
