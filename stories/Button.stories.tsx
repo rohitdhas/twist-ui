@@ -21,7 +21,11 @@ export default meta;
 
 const Template: Story = args => <Button label={''} {...args} />;
 export const Primary = Template.bind({});
-export const Secondary = Template.bind({});
+export const Success = Template.bind({});
+export const Danger = Template.bind({});
+export const Warn = Template.bind({});
 
-Primary.args = { label: 'Primary' };
-Secondary.args = { label: '' };
+Primary.args = { label: 'Primary', varient: 'primary' };
+Success.args = { label: 'Success', varient: 'success' };
+Danger.args = { label: 'Danger', varient: 'danger' };
+Warn.args = { label: 'Warn', varient: 'warn' };
