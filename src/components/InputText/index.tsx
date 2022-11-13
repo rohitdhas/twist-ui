@@ -10,7 +10,7 @@ const Button: React.FC<InputTextTypes> = props => {
           width="20"
           height="20"
           fill="currentColor"
-          className="absolute left-3 top-1/2 -mt-2.5 text-slate-400 pointer-events-none group-focus-within:text-blue-500"
+          className="absolute left-3 top-1/2 -mt-2.5 text-slate-400 pointer-events-none group-focus-within:text-blue-500 text-gray-500"
           aria-hidden="true"
         >
           <path
@@ -23,7 +23,7 @@ const Button: React.FC<InputTextTypes> = props => {
         <></>
       )}
       <input
-        className={`focus:ring-2 focus:ring-blue-500 focus:outline-none appearance-none w-full text-sm leading-6 text-slate-900 placeholder-slate-400 rounded-md py-2 ring-1 ring-slate-200 shadow-sm ${
+        className={`focus:ring-2 focus:ring-primary focus:outline-none appearance-none w-full text-sm leading-6 text-slate-900 placeholder-slate-400 rounded-md py-2 ring-1 ring-slate-200 shadow-sm ${
           searchIcon ? 'pl-10' : 'px-2'
         }`}
         type="text"
