@@ -1,12 +1,11 @@
 import { ButtonHTMLAttributes } from 'react';
-import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
-type ButtonVariants = 'primary' | 'secondary';
+type ButtonVariants = 'primary' | 'success' | 'danger' | 'warn';
 
 export interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
-  label?: string;
-  icon?: IconProp;
   varient?: ButtonVariants;
+  label?: string;
+  loading?: boolean;
 }
 
 export type ButtonProps = Props;
