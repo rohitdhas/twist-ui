@@ -1,7 +1,7 @@
 import React from 'react';
 import { InputTextTypes } from './InputText.types';
 
-const Button: React.FC<InputTextTypes> = props => {
+const InputText: React.FC<InputTextTypes> = props => {
   const { searchIcon, ...rest } = props;
   return (
     <form className="group relative">
@@ -34,4 +34,4 @@ const Button: React.FC<InputTextTypes> = props => {
   );
 };
 
-export default Button;
+export default InputText;
