@@ -5,27 +5,27 @@ import Spinner from '../Spinner';
 const buttonStyles = {
   primary: {
     bg: 'bg-primary',
-    hover: 'bg-primary-dark',
+    hover: 'hover:bg-primary-dark',
     outline: 'border-primary',
-    text: 'primary',
+    text: 'text-primary',
   },
   success: {
     bg: 'bg-success',
-    hover: 'bg-success-dark',
+    hover: 'hover:bg-success-dark',
     outline: 'border-success',
-    text: 'success',
+    text: 'text-success',
   },
   danger: {
     bg: 'bg-danger',
-    hover: 'bg-danger-dark',
+    hover: 'hover:bg-danger-dark',
     outline: 'border-danger',
-    text: 'danger',
+    text: 'text-danger',
   },
   warn: {
     bg: 'bg-alert',
-    hover: 'bg-alert-dark',
+    hover: 'hover:bg-alert-dark',
     outline: 'border-alert',
-    text: 'alert',
+    text: 'text-alert',
   },
 };
 
@@ -56,7 +56,7 @@ const Button: React.FC<ButtonProps> = React.memo(
       return (
         <button
           ref={elementRef}
-          className={`font-bold flex align items-center justify-center text-${varientClasses.text} px-4 py-2 rounded-md border-2 ${varientClasses.outline} hover:${varientClasses.hover} transition-all hover:text-white`}
+          className={`font-bold flex align items-center justify-center ${varientClasses.text} px-4 py-2 rounded-md border-2 ${varientClasses.outline} ${varientClasses.hover} transition-all hover:text-white`}
           {...restProps}
         >
           {children || label || 'Click Me!'}
@@ -67,9 +67,7 @@ const Button: React.FC<ButtonProps> = React.memo(
     return (
       <button
         ref={elementRef}
-        className={`font-bold flex align items-center justify-center text-white px-4 py-2 rounded-md ${
-          buttonStyles[varient!].bg
-        } hover:${buttonStyles[varient!].hover} transition-all`}
+        className={`font-bold flex align items-center justify-center text-white px-4 py-2 rounded-md ${varientClasses.bg} ${varientClasses.hover} transition-all`}
         {...restProps}
       >
         {children || label || 'Click Me!'}
