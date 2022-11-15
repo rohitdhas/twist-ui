@@ -23,8 +23,8 @@ const InputText: React.FC<InputTextTypes> = props => {
         <></>
       )}
       <input
-        className={`focus:ring-2 focus:ring-primary focus:outline-none appearance-none w-full text-sm leading-6 text-slate-900 placeholder-slate-400 rounded-md py-2 ring-1 ring-slate-200 shadow-sm ${
-          searchIcon ? 'pl-10' : 'px-2'
+        className={`focus:ring-4 transition-all focus:ring-primary focus:outline-none appearance-none w-full text-sm leading-6 text-slate-900 placeholder-slate-400 rounded-md py-2 ring-2 ring-gray-300 shadow-sm ${
+          searchIcon ? 'pl-10' : 'px-4'
         }`}
         type="text"
         aria-label="input-text"
