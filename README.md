@@ -7,7 +7,7 @@
 <h3 align="center">Twist UI</h3>
 
 <p align="center">
-  Simple, intuitive, and powerful front-end framework for faster and easier web development.
+  Simple, intuitive, and powerful component library for faster and easier react development.
   <br>
   <br>
   <a href="https://twistui.rohitdhas.dev/">Docs</a>
