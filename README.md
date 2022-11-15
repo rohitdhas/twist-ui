@@ -9,14 +9,22 @@
 <p align="center">
   Simple, intuitive, and powerful front-end framework for faster and easier web development.
   <br>
-  <!-- <a href="https://getbootstrap.com/docs/5.2/"><strong>Explore Bootstrap docs »</strong></a> -->
-  <!-- <br> -->
   <br>
+  <a href="https://twistui.rohitdhas.dev/">Docs</a>
+  ·
   <a href="https://github.com/rohitdhas/twist-ui/issues/new?assignees=-&labels=bug&template=bug_report.yml">Report bug</a>
   ·
   <a href="https://github.com/rohitdhas/twist-ui/issues/new?assignees=&labels=feature&template=feature_request.yml">Request feature</a>
-  <!-- ·
-  <a href="https://themes.getbootstrap.com/">Themes</a>
-  ·
-  <a href="https://blog.getbootstrap.com/">Blog</a> -->
 </p>
+
+## 📦 Get Started
+
+Several quick start options are available:
+
+- Clone the repo: `git clone https://github.com/rohitdhas/twist-ui.git`
+- Install with [npm](https://www.npmjs.com/): `npm install twist-ui`
+- Install with [yarn](https://yarnpkg.com/): `yarn add twist-ui`
+
+## 📜 License
+
+This software is open source, licensed under the [MIT License](https://github.com/PawanKolhe/color-calendar/blob/master/LICENSE).
