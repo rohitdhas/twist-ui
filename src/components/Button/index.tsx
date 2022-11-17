@@ -29,16 +29,10 @@ const buttonStyles = {
   },
 };
 
-const Button: React.FC<ButtonProps> = React.memo(
-  React.forwardRef((props, ref) => {
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  (props, ref) => {
     const { label, children, loading, varient, outlined, ...restProps } = props;
-    const elementRef = React.useRef(null);
     const varientClasses = buttonStyles[varient!];
-
-    React.useImperativeHandle(ref, () => ({
-      props,
-      getElement: () => elementRef.current,
-    }));
 
     if (loading) {
       return (
@@ -55,7 +49,7 @@ const Button: React.FC<ButtonProps> = React.memo(
     if (outlined) {
       return (
         <button
-          ref={elementRef}
+          ref={ref}
           className={`font-bold flex align items-center justify-center ${varientClasses.text} px-4 py-2 rounded-md border-2 ${varientClasses.outline} ${varientClasses.hover} transition-all hover:text-white`}
           {...restProps}
         >
@@ -66,16 +60,17 @@ const Button: React.FC<ButtonProps> = React.memo(
 
     return (
       <button
-        ref={elementRef}
+        ref={ref}
         className={`font-bold flex align items-center justify-center text-white px-4 py-2 rounded-md ${varientClasses.bg} ${varientClasses.hover} transition-all`}
         {...restProps}
       >
         {children || label || 'Click Me!'}
       </button>
     );
-  })
+  }
 );
 
+Button.displayName = 'Button';
 Button.defaultProps = {
   varient: 'primary',
 };
