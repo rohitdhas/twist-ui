@@ -5,13 +5,7 @@ import { Textarea } from '../src';
 const meta: Meta = {
   title: 'TextArea',
   component: Textarea,
-  argTypes: {
-    children: {
-      control: {
-        type: 'text',
-      },
-    },
-  },
+  argTypes: {},
   parameters: {
     controls: { expanded: true },
   },

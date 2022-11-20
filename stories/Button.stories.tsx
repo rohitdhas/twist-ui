@@ -5,13 +5,7 @@ import { Button } from '../src';
 const meta: Meta = {
   title: 'Button',
   component: Button,
-  argTypes: {
-    children: {
-      control: {
-        type: 'text',
-      },
-    },
-  },
+  argTypes: {},
   parameters: {
     controls: { expanded: true },
   },

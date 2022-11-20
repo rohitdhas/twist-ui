@@ -5,13 +5,7 @@ import { InputText } from '../src';
 const meta: Meta = {
   title: 'InputText',
   component: InputText,
-  argTypes: {
-    children: {
-      control: {
-        type: 'text',
-      },
-    },
-  },
+  argTypes: {},
   parameters: {
     controls: { expanded: true },
   },
