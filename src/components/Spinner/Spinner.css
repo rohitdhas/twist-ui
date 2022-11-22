@@ -8,6 +8,26 @@
   animation: spin 1s linear infinite;
 }
 
+.primary {
+  border: 3px solid #23a6f0;
+  border-top: 3px solid transparent;
+}
+
+.success {
+  border: 3px solid #2dc071;
+  border-top: 3px solid transparent;
+}
+
+.danger {
+  border: 3px solid #e74040;
+  border-top: 3px solid transparent;
+}
+
+.warn {
+  border: 3px solid #e77c40;
+  border-top: 3px solid transparent;
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
