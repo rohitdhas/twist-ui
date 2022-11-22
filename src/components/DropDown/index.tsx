@@ -2,7 +2,7 @@ import React from 'react';
 import { DropDownProps } from './Dropdown.types';
 import { v4 as uuidv4 } from 'uuid';
 
-const Dropdown: React.FC<DropDownProps> = React.memo(props => {
+const Dropdown: React.FC<DropDownProps> = props => {
   const { itemList, defaultText, onSelect, value } = props;
   const [selectedValue, setSelectedValue] = React.useState<string>('');
   const [dropdownVisible, setDropdownVisible] = React.useState<boolean>(false);
@@ -56,10 +56,6 @@ const Dropdown: React.FC<DropDownProps> = React.memo(props => {
       )}
     </div>
   );
-});
-
-Dropdown.defaultProps = {
-  itemList: [],
 };
 
 export default Dropdown;
