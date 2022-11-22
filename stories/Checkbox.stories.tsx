@@ -1,10 +1,10 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
-import { Checkbox } from '../src';
+import { CheckboxGroup } from '../src';
 
 const meta: Meta = {
-  title: 'Checkbox',
-  component: Checkbox,
+  title: 'CheckboxGroup',
+  component: CheckboxGroup,
   argTypes: {},
   parameters: {
     controls: { expanded: true },
@@ -13,7 +13,7 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story = args => <Checkbox itemList={[]} {...args} />;
+const Template: Story = args => <CheckboxGroup itemList={[]} {...args} />;
 export const Default = Template.bind({});
 
 Default.args = {

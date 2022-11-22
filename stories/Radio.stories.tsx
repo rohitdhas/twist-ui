@@ -1,10 +1,10 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
-import { Radio } from '../src';
+import { RadioGroup } from '../src';
 
 const meta: Meta = {
-  title: 'Radio',
-  component: Radio,
+  title: 'RadioGroup',
+  component: RadioGroup,
   argTypes: {},
   parameters: {
     controls: { expanded: true },
@@ -13,7 +13,7 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story = args => <Radio itemList={[]} {...args} />;
+const Template: Story = args => <RadioGroup itemList={[]} {...args} />;
 export const Default = Template.bind({});
 
 Default.args = {

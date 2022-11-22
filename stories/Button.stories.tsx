@@ -13,7 +13,7 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story = args => <Button label={''} {...args} />;
+const Template: Story = args => <Button {...args} />;
 export const Primary = Template.bind({});
 export const Success = Template.bind({});
 export const Danger = Template.bind({});

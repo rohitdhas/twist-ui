@@ -13,7 +13,13 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story = args => <Dropdown itemList={[]} {...args} />;
+const Template: Story = args => {
+  return (
+    <div>
+      <Dropdown itemList={[]} {...args} />
+    </div>
+  );
+};
 export const Default = Template.bind({});
 
 Default.args = {
