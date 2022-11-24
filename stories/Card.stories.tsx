@@ -7,7 +7,7 @@ const meta: Meta = {
   component: Card,
   argTypes: {},
   parameters: {
-    controls: { expanded: true },
+    controls: { expanded: false },
   },
 };
 
