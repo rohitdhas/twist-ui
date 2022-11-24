@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useId } from 'react';
 import { InputTextTypes } from './InputText.types';
 
 const InputText: React.FC<InputTextTypes> = props => {
-  const { searchIcon, ...rest } = props;
+  const { searchIcon, label, ...rest } = props;
+  const id = useId();
+
   return (
     <form className="group relative">
       {searchIcon ? (
@@ -22,7 +24,18 @@ const InputText: React.FC<InputTextTypes> = props => {
       ) : (
         <></>
       )}
+      {label ? (
+        <label
+          className="font-bold text-sm text-text-color ml-1 my-2 block"
+          htmlFor={id}
+        >
+          {label}
+        </label>
+      ) : (
+        <></>
+      )}
       <input
+        id={id}
         className={`focus:ring-4 transition-all focus:ring-primary focus:outline-none appearance-none w-full text-sm leading-6 text-slate-900 placeholder-slate-400 rounded-md py-2 ring-2 ring-gray-300 shadow-sm ${
           searchIcon ? 'pl-10' : 'px-4'
         }`}

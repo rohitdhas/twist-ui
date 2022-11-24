@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useId } from 'react';
 import { DropDownProps } from './Dropdown.types';
 import { v4 as uuidv4 } from 'uuid';
 
 const Dropdown: React.FC<DropDownProps> = props => {
-  const { itemList, defaultText, onSelect, value } = props;
+  const { itemList, defaultText, onSelect, value, label } = props;
   const [selectedValue, setSelectedValue] = React.useState<string>('');
   const [dropdownVisible, setDropdownVisible] = React.useState<boolean>(false);
+  const id = useId();
 
   React.useEffect(() => {
     document.addEventListener('click', () => setDropdownVisible(false));
@@ -25,7 +26,18 @@ const Dropdown: React.FC<DropDownProps> = props => {
       onClick={e => e.stopPropagation()}
       className="twist-select relative transition-all w-full"
     >
+      {label ? (
+        <label
+          className="font-bold text-sm text-text-color ml-1 my-2 block"
+          htmlFor={id}
+        >
+          {label}
+        </label>
+      ) : (
+        <></>
+      )}
       <div
+        id={id}
         onClick={() => setDropdownVisible(!dropdownVisible)}
         className="bg-white px-4 py-2 border-2 border-gray-200 rounded-md text-left text-text-color cursor-pointer hover:border-primary flex justify-between"
       >
