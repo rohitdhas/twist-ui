@@ -10,3 +10,6 @@ export { default as Alert } from './Alert';
 export { default as Drawer } from './Drawer';
 export { default as Dialog } from './Dialog';
 export { default as Tooltip } from './Tooltip';
+export { default as Link } from './Link';
+export { default as Tabs } from './Tabs';
+export { default as Table } from './Table';
