@@ -1,6 +1,6 @@
 import React from 'react';
 import { RadioProps } from './Radio.types';
-import { v4 as uuidv4 } from 'uuid';
+import { uuid } from '../../../utils/main';
 
 const RadioGroup: React.FC<RadioProps> = React.memo(props => {
   const { itemList, onSelect, value } = props;
@@ -20,7 +20,7 @@ const RadioGroup: React.FC<RadioProps> = React.memo(props => {
         return (
           <div className="group">
             <div
-              key={uuidv4()}
+              key={uuid()}
               onClick={() => setSelectedValue(item)}
               className="my-2 group-hover:text-primary transition-colors cursor-pointer flex align items-center"
             >

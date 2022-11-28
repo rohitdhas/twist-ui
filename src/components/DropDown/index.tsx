@@ -1,6 +1,6 @@
 import React, { useId } from 'react';
 import { DropDownProps } from './Dropdown.types';
-import { v4 as uuidv4 } from 'uuid';
+import { uuid } from '../../../utils/main';
 
 const Dropdown: React.FC<DropDownProps> = props => {
   const { itemList, defaultText, onSelect, value, label } = props;
@@ -52,7 +52,7 @@ const Dropdown: React.FC<DropDownProps> = props => {
             return (
               <li
                 className="px-2 py-2 rounded-sm hover:bg-gray-100 m-1"
-                key={uuidv4()}
+                key={uuid()}
                 onClick={() => {
                   setSelectedValue(item);
                   setDropdownVisible(false);

@@ -1,6 +1,6 @@
 import React from 'react';
 import { CheckboxProps } from './Checkbox.types';
-import { v4 as uuidv4 } from 'uuid';
+import { uuid } from '../../../utils/main';
 
 const CheckboxGroup: React.FC<CheckboxProps> = React.memo(props => {
   const { itemList, onSelect, values } = props;
@@ -21,7 +21,7 @@ const CheckboxGroup: React.FC<CheckboxProps> = React.memo(props => {
         return (
           <div className="group">
             <div
-              key={uuidv4()}
+              key={uuid()}
               onClick={() => {
                 if (selected) {
                   setSelectedValues(selectedValues.filter(val => val !== item));

@@ -1,5 +1,5 @@
 import React from 'react';
-import { v4 as uuid } from 'uuid';
+import { uuid } from '../../../utils/main';
 import { TableTypes } from './Table.types';
 
 const Table: React.FC<TableTypes> = props => {

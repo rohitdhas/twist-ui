@@ -1,6 +1,6 @@
 import React from 'react';
 import { TabTypes, TabContentTypes } from './Tabs.types';
-import { v4 as uuid } from 'uuid';
+import { uuid } from '../../../utils/main';
 
 const Tabs: React.FC<TabTypes> = props => {
   const { items, defaultSelected, onChange } = props;
